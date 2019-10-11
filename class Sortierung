@@ -20,7 +20,7 @@ public class Sortierung {
 		// array = BubbleSort.bubblesort(array);											 // Array wird mit BubbleSort sortiert
 		// array = MergeSort.mergesort(array);                                               // Array wird mit MergeSort sortiert
 		// array = QuickSort.quicksort(array, 0, array.length-1);                            // Array wird mit QuickSort sortiert
-		// array = QuickSortVonJoelGenialVollendet.quicksortjoel(array, 0, array.length-1);  // Array wird mit QuickSort ft. Joel sortiert
+		// array = QuickSort2.quicksort2(array, 0, array.length-1);                          // Array wird mit QuickSort ft. Joel sortiert
 		
 		double dauermsec = System.currentTimeMillis() - start;                               // Jetzige Sekunden seit dem 1.1 1970 - vorherige
 		Array.Ausgabe(array);
