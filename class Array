@@ -1,0 +1,23 @@
+package array;
+
+public class Array {
+	public static void main(String[] args) {
+		double[] xy = Zufall(20);
+		Ausgabe(xy);
+	}
+
+	public static double[] Zufall(int lÃ¤nge) {                  // Array mit zufälligen Kommazahlen erstellen lassen
+		double[] array = new double[lÃ¤nge];
+		for (int i = 0; i < array.length; i++) {
+			array[i] = Math.random();
+		}
+		return array;
+	}
+
+	public static void Ausgabe(double array[]) {                 // Array in der Konsole ausgeben lassen
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+		System.out.println(" ");
+	}
+}
