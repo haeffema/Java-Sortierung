@@ -16,11 +16,11 @@ public class Sortierung {
 		double start = System.currentTimeMillis();											 // Millisekunden seit 1.1 1970 werden in der Variable start gespeichert
 
 		// array = InsertionSort.insertionsort(array);                                       // Array wird mit InsertionSort sortiert
-		// array = SelectionSort.selectionsort(array);										 // Array wird mit SelectionSort sortiert
-		// array = BubbleSort.bubblesort(array);											 // Array wird mit BubbleSort sortiert
+		// array = SelectionSort.selectionsort(array);					     // Array wird mit SelectionSort sortiert
+		// array = BubbleSort.bubblesort(array);					     // Array wird mit BubbleSort sortiert
 		// array = MergeSort.mergesort(array);                                               // Array wird mit MergeSort sortiert
 		// array = QuickSort.quicksort(array, 0, array.length-1);                            // Array wird mit QuickSort sortiert
-		// array = QuickSort2.quicksort2(array, 0, array.length-1);                          // Array wird mit QuickSort ft. Joel sortiert
+		// array = BogoSort.bogosort(array);                                                 // Array wird mit BogoSort sortiert
 		
 		double dauermsec = System.currentTimeMillis() - start;                               // Jetzige Sekunden seit dem 1.1 1970 - vorherige
 		Array.Ausgabe(array);
