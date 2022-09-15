@@ -1,0 +1,31 @@
+package sortierung;
+
+import array.Array;
+
+public class Sortierung {
+
+	public static void main(String[] args) {
+		
+		// System.out.println("Geben sie die Laenge des Arrays an:");                        // Variable über Konsole festlegen einfach die // weg und bei int lang gleich Zahl hin
+		// int lang = new java.util.Scanner(System.in).nextInt();
+		 int lang = 3000000;
+		 
+		double[] array = Array.Zufall(lang);
+		
+		Array.Ausgabe(array);
+		double start = System.currentTimeMillis();											 // Millisekunden seit 1.1 1970 werden in der Variable start gespeichert
+
+		// array = InsertionSort.insertionsort(array);                                       // Array wird mit InsertionSort sortiert
+		// array = SelectionSort.selectionsort(array);					     // Array wird mit SelectionSort sortiert
+		// array = BubbleSort.bubblesort(array);					     // Array wird mit BubbleSort sortiert
+		// array = MergeSort.mergesort(array);                                               // Array wird mit MergeSort sortiert
+		// array = QuickSort.quicksort(array, 0, array.length-1);                            // Array wird mit QuickSort sortiert
+		// array = BogoSort.bogosort(array);                                                 // Array wird mit BogoSort sortiert
+		
+		double dauermsec = System.currentTimeMillis() - start;                               // Jetzige Sekunden seit dem 1.1 1970 - vorherige
+		Array.Ausgabe(array);
+		TimeEnd.timeend(dauermsec);
+		
+	}
+	
+}
