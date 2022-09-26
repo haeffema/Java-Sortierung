@@ -1,7 +1,7 @@
 package src;
 
 public class BubbleSort {
-    public static double[] bubbleSort(double[] array) {
+    public static void bubbleSort(double[] array) {
         for (int durchlauf = 0; durchlauf < array.length; durchlauf++) {
             for (int i = 1; i < array.length; i++) {
                 if (array[i] < array[i - 1]) {
@@ -11,6 +11,5 @@ public class BubbleSort {
                 }
             }
         }
-        return array;
     }
 }

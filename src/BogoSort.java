@@ -1,7 +1,7 @@
 package src;
 
 public class BogoSort {
-    public static double[] bogoSort(double[] array) {
+    public static void bogoSort(double[] array) {
         while (!isSorted(array)) {
             for (int i = 0; i < array.length; i++) {
                 int index1 = (int) (Math.random() * array.length),
@@ -11,10 +11,9 @@ public class BogoSort {
                 array[index2] = a;
             }
         }
-        return array;
     }
 
-    public static boolean isSorted(double[] array) {
+    private static boolean isSorted(double[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] > array[i + 1]) {
                 return false;

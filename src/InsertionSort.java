@@ -1,7 +1,7 @@
 package src;
 
 public class InsertionSort {
-    public static double[] insertionSort(double[] array) {
+    public static void insertionSort(double[] array) {
         for (int durchlauf = 1; durchlauf < array.length; durchlauf++) {
             for (int i = durchlauf; i > 0; i--) {
                 if (array[i] < array[i - 1]) {
@@ -11,6 +11,5 @@ public class InsertionSort {
                 }
             }
         }
-        return array;
     }
 }
