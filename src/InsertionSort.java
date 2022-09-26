@@ -1,27 +1,16 @@
 package src;
 
 public class InsertionSort {
-	
-	public static double[] insertionsort(double array[]) { 
-		
-		for (int durchlauf = 1; durchlauf < array.length; durchlauf++) {                     // For-Schleife mit Variable durchlauf wird erstellt und gleich eins gesetzt da eins als Basiswert benutzt wird und erhoeht sich mit jedem durchlauf bis zur Laenge des Arrays
-
-			for (int i = durchlauf; i > 0; i--) {                                            // For-Schleife mit Variable i wird erstellt und gleich der Variable durchlauf gesetzt. Solange i groesser als 0 ist veringert sich der Wert von i mit jedem Durchgang
-				 
-				if (array[i] < array[i - 1]) {
-																							 // If Bedingung prueft ob das Array an der Stelle i einen kleineren Wert hat als an der Stelle i - 1
-					 
-					double temp = array[i];                                                  // Wenn dies der Fall ist werden die Plaetze der beiden im Array getauscht
-					array[i] = array[i - 1];
-					array[i - 1] = temp;
-
-				}
-
-			}
-
-		}
-		
-		return array;																		 // Array wird zurueck gegeben
-	}
-	
+    public static double[] insertionSort(double[] array) {
+        for (int durchlauf = 1; durchlauf < array.length; durchlauf++) {
+            for (int i = durchlauf; i > 0; i--) {
+                if (array[i] < array[i - 1]) {
+                    double temp = array[i];
+                    array[i] = array[i - 1];
+                    array[i - 1] = temp;
+                }
+            }
+        }
+        return array;
+    }
 }

@@ -3,41 +3,26 @@ package src;
 import java.text.NumberFormat;
 
 public class TimeEnd {
-
-	public static void timeend(double dauermsec) {                                       
-		
-		NumberFormat n = NumberFormat.getInstance();                                     // Die maximale Anzahl an Nachkommastellen wird auf 2 gesetzt mit automatischer Ab-bzw. Aufrundung
-		n.setMaximumFractionDigits(2);
-		double dauersec = dauermsec / 1000;                                              // Sekunden werden durch teilen der Millisekunden ausgerechnet
-		double dauermin = dauersec / 60;                                                 // Minuten werden durch teilen der Sekunden ausgerechnet
-		
-		if (dauersec >= 60) {                                                            // Nur wenn es über 60 Sekunden sind, werden Minuten, Sekunden und Millisekunden in der Konsole ausgegeben
-			
-			System.out.print("Dauer: " + n.format(dauermin));
-			System.out.println("min");
-			System.out.print("Dauer: " + n.format(dauersec));
-			System.out.println("s");
-			System.out.print("Dauer: " + dauermsec);
-			System.out.println("ms");
-			
-		} 
-		
-		else if (dauermsec >= 1000) {                                                    // Wenn es trotzdem ueber 1000 Millisekunden send, werden Sekunden und Millisekunden in der Konsole ausgegeben
-			
-			System.out.print("Dauer: " + n.format(dauersec));
-			System.out.println("s");
-			System.out.print("Dauer: " + dauermsec);
-			System.out.println("ms");
-			
-		}
-
-		else {                                                                           // Ansonsten werden nur die Millisekunden in der Konsole ausgegeben
-			
-			System.out.print("Dauer: " + dauermsec);
-			System.out.println("ms");
-			
-		}
-		
-	}
-
+    public static void timeEnd(double dauermsec) {
+        NumberFormat n = NumberFormat.getInstance();
+        n.setMaximumFractionDigits(2);
+        double dauersec = dauermsec / 1000;
+        double dauermin = dauersec / 60;
+        if (dauersec >= 60) {
+            System.out.print("Dauer: " + n.format(dauermin));
+            System.out.println("min");
+            System.out.print("Dauer: " + n.format(dauersec));
+            System.out.println("s");
+            System.out.print("Dauer: " + dauermsec);
+            System.out.println("ms");
+        } else if (dauermsec >= 1000) {
+            System.out.print("Dauer: " + n.format(dauersec));
+            System.out.println("s");
+            System.out.print("Dauer: " + dauermsec);
+            System.out.println("ms");
+        } else {
+            System.out.print("Dauer: " + dauermsec);
+            System.out.println("ms");
+        }
+    }
 }

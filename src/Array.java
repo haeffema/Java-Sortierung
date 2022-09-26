@@ -9,10 +9,10 @@ public class Array {
         return array;
     }
 
-    public static void Ausgabe(double array[]) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+    public static void Ausgabe(double[] array) {
+        for (double entry : array) {
+            System.out.println(entry);
         }
-        System.out.println(" ");
+        System.out.println();
     }
 }
