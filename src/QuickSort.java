@@ -6,42 +6,41 @@ public class QuickSort {
         doQuickSort(array, 0, array.length - 1);
     }
 
-    public static double[] doQuickSort(double[] array, int s, int e) {
-        if (e > s) {
-            int i = s;
-            int j = e - 1;
-            double pivotElement = array[e];
+    private static void doQuickSort(double[] array, int start, int end) {
+        if (end > start) {
+            int pointer_up = start;
+            int pointer_down = end - 1;
+            double pivotElement = array[end];
             double tmp;
-            while (array[i] < pivotElement) {
-                i++;
+            while (array[pointer_up] < pivotElement) {
+                pointer_up++;
             }
-            while (array[j] > pivotElement && j > 0) {
-                j--;
+            while (array[pointer_down] > pivotElement && pointer_down > 0) {
+                pointer_down--;
             }
-            if (i < j) {
-                tmp = array[i];
-                array[i] = array[j];
-                array[j] = tmp;
+            if (pointer_up < pointer_down) {
+                tmp = array[pointer_up];
+                array[pointer_up] = array[pointer_down];
+                array[pointer_down] = tmp;
             }
-            while (i < j) {
-                while (array[i] < pivotElement) {
-                    i++;
+            while (pointer_up < pointer_down) {
+                while (array[pointer_up] < pivotElement) {
+                    pointer_up++;
                 }
-                while (j > 0 && array[j] > pivotElement) {
-                    j--;
+                while (pointer_down > 0 && array[pointer_down] > pivotElement) {
+                    pointer_down--;
                 }
-                if (i < j) {
-                    tmp = array[i];
-                    array[i] = array[j];
-                    array[j] = tmp;
+                if (pointer_up < pointer_down) {
+                    tmp = array[pointer_up];
+                    array[pointer_up] = array[pointer_down];
+                    array[pointer_down] = tmp;
                 }
             }
-            double tmp2 = array[e];
-            array[e] = array[i];
-            array[i] = tmp2;
-            doQuickSort(array, s, i - 1);
-            doQuickSort(array, i + 1, e);
+            double tmp2 = array[end];
+            array[end] = array[pointer_up];
+            array[pointer_up] = tmp2;
+            doQuickSort(array, start, pointer_up - 1);
+            doQuickSort(array, pointer_up + 1, end);
         }
-        return array;
     }
 }
