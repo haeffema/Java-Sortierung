@@ -10,12 +10,13 @@ public class QuickSort {
         if (end > start) {
             int pointer_up = start;
             int pointer_down = end - 1;
-            double pivotElement = array[end];
+            double pivot = array[end];
             double tmp;
-            while (array[pointer_up] < pivotElement) {
+            double tmp2;
+            while (array[pointer_up] < pivot) {
                 pointer_up++;
             }
-            while (array[pointer_down] > pivotElement && pointer_down > 0) {
+            while (array[pointer_down] > pivot && pointer_down > 0) {
                 pointer_down--;
             }
             if (pointer_up < pointer_down) {
@@ -24,10 +25,10 @@ public class QuickSort {
                 array[pointer_down] = tmp;
             }
             while (pointer_up < pointer_down) {
-                while (array[pointer_up] < pivotElement) {
+                while (array[pointer_up] < pivot) {
                     pointer_up++;
                 }
-                while (pointer_down > 0 && array[pointer_down] > pivotElement) {
+                while (pointer_down > 0 && array[pointer_down] > pivot) {
                     pointer_down--;
                 }
                 if (pointer_up < pointer_down) {
@@ -36,7 +37,7 @@ public class QuickSort {
                     array[pointer_down] = tmp;
                 }
             }
-            double tmp2 = array[end];
+            tmp2 = array[end];
             array[end] = array[pointer_up];
             array[pointer_up] = tmp2;
             doQuickSort(array, start, pointer_up - 1);

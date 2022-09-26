@@ -2,17 +2,17 @@ package src;
 
 public class SelectionSort {
     public static void selectionSort(double[] array) {
-        for (int durchlauf = 0; durchlauf < array.length; durchlauf++) {
+        for (int counter = 0; counter < array.length; counter++) {
             double min = 1;
             int index = 0;
-            for (int i = durchlauf; i < array.length; i++) {
-                if (min > array[i]) {
-                    min = array[i];
-                    index = i;
+            for (int pointer = counter; pointer < array.length; pointer++) {
+                if (min > array[pointer]) {
+                    min = array[pointer];
+                    index = pointer;
                 }
             }
-            double temp = array[durchlauf];
-            array[durchlauf] = array[index];
+            double temp = array[counter];
+            array[counter] = array[index];
             array[index] = temp;
         }
     }
