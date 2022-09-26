@@ -1,4 +1,4 @@
-package sortierung;
+package src;
 
 public class MergeSort {
 	public static double[] mergesort(double array[]) {

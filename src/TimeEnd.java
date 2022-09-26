@@ -1,4 +1,4 @@
-package sortierung;
+package src;
 
 import java.text.NumberFormat;
 

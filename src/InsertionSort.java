@@ -1,4 +1,4 @@
-package sortierung;
+package src;
 
 public class InsertionSort {
 	
